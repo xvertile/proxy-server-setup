@@ -10,14 +10,6 @@ Key actions performed by the script include:
 - Blocking all mail ports to improve security and prevent misuse of the server for sending unsolicited emails.
 - Installing `iptables-persistent` to ensure firewall rules persist across reboots.
 
-## Getting Started
-
-### Prerequisites
-
-- An Ubuntu server (The script is designed with Ubuntu in mind, but it may work with slight modifications on other Linux distributions.)
-- Root access to the server.
-- `curl` installed on the server (for downloading the script).
-
 ### Installation
 
 To apply the patch to your server, execute the following command in your terminal. This command downloads the script and executes it with root privileges. Ensure you have the necessary permissions to perform these actions on your server.
@@ -25,3 +17,10 @@ To apply the patch to your server, execute the following command in your termina
 ```bash
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/xvertile/proxy-server-setup/main/patcher.sh)"
 ```
+
+### Prerequisites
+
+- An Ubuntu server (The script is designed with Ubuntu in mind, but it may work with slight modifications on other Linux distributions.)
+- Root access to the server.
+- `curl` installed on the server (for downloading the script).
+
