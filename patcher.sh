@@ -6,12 +6,6 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# Download the configuration file and place it in /etc/sysctl.d/
-wget -O /etc/sysctl.d/99-custom.conf https://raw.githubusercontent.com/xvertile/proxy-server-setup/main/99-custom.conf
-
-# Reload system-wide sysctl settings
-sudo sysctl --system
-
 # Set ulimit to the maximum possible value and make it persistent
 # Get the maximum allowed number of open file descriptors
 MAX_ULIMIT=$(ulimit -Hn)
@@ -30,5 +24,8 @@ done
 
 # Save iptables rules to make them persistent across reboots
 iptables-save > /etc/iptables/rules.v4
+wget -O /etc/sysctl.d/99-custom.conf https://raw.githubusercontent.com/xvertile/proxy-server-setup/main/99-custom.conf
 
+# Reload system-wide sysctl settings
+sudo sysctl --system
 echo "Configuration complete. System modifications applied."
