@@ -22,6 +22,10 @@ To apply the patch to your server, execute the following command in your termina
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/xvertile/proxy-server-setup/main/patcher.sh)"
 ```
 
+Without SMTP block:
+```bash
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/xvertile/proxy-server-setup/main/simple-patch.sh)"
+```
 ### Prerequisites
 
 - An Ubuntu server (The script is designed with Ubuntu in mind, but it may work with slight modifications on other Linux distributions.)
